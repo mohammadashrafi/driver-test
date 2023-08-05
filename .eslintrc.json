@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "root": true,
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": [
+      2,
+      {
+        "functions": "defaultArguments"
+      }
+    ],
+    // remove this to support accessibility
+    "jsx-a11y/click-events-have-key-events": 0,
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "pattern": {
+          "svg": "always",
+          "png": "always"
+        }
+      }
+    ],
+    "consistent-return": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
 }
