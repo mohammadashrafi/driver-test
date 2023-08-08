@@ -1,0 +1,59 @@
+.ant-progress-small {
+  .ant-progress-inner {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+
+  .ant-progress-text {
+    font-size: 0.875rem;
+  }
+}
+
+.ant-btn {
+  border-radius: 0.5rem;
+}
+
+.ant-select {
+  > .ant-select-selector {
+    height: 2.25rem !important;
+    border-radius: 0.5rem;
+
+    &:not(:focus, :hover) {
+      border-color: #cccccc;
+    }
+  }
+}
+
+.ant-input {
+  height: 2.25rem;
+  border-radius: 0.5rem;
+
+  &:not(:focus) {
+    border-color: #cccccc;
+  }
+}
+
+.ant-input-password {
+  height: 2.25rem;
+  border-radius: 0.5rem;
+
+  &:has(> .ant-input) {
+    .ant-input {
+      height: auto;
+    }
+  }
+
+  &:not(:focus, :not(:has(+ .ant-input-affix-wrapper-focused))) {
+    border-color: #cccccc;
+  }
+}
+
+.ant-form-item .ant-form-item-label > label {
+  height: auto;
+  margin: 0 0.75rem;
+  direction: ltr;
+
+  &::after {
+    display: none;
+  }
+}

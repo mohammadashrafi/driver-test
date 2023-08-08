@@ -31,13 +31,8 @@ export type AppPropsWithLayout = AppProps & {
 export type LinkTarget = '_self' | '_blank' | '_parent' | '_top'
 
 export type PresetColorType =
-  | 'bg-color'
-  | 'black'
-  | 'white'
-  | 'simple-white'
-  | 'dark-matter'
-  | 'corn-silk'
-  | 'quick-silver'
-  | 'gray-matter'
-  | 'platinum'
+  | 'neutral-white'
+  | 'neutral-black'
+  | 'neutral-black-50'
+  | 'neutral-black-20'
   | 'transparent'

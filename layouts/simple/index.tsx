@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { useAppSelector } from 'libs/redux/store'
 import Row from 'antd/lib/row'
 import Col from 'antd/lib/col'
 import cn from 'classnames'
@@ -6,18 +7,24 @@ import cn from 'classnames'
 import type { SimpleLayoutProps } from 'layouts/interface'
 import styles from './simple.module.scss'
 // import { renderFooter } from './helper'
-import { useAppSelector } from 'libs/redux/store'
+
+import type { CSSProperties } from 'react'
 
 export default function SimpleLayout({
   children,
   title,
   historyBack = true,
   hasAction = false, //   actionTitle = '',
+  contentBgColor = undefined,
 }: SimpleLayoutProps) {
   const { back } = useRouter()
   const { selected } = useAppSelector((state) => state.footer)
 
   const hasFooter = hasAction && selected
+
+  const bgColorOutput: CSSProperties = contentBgColor
+    ? { backgroundColor: contentBgColor }
+    : {}
 
   return (
     <div className={styles['simple']}>
@@ -34,6 +41,7 @@ export default function SimpleLayout({
           styles['simple__content'],
           hasFooter ? styles['simple__content--hasFooter'] : ''
         )}
+        style={bgColorOutput}
       >
         {children}
       </div>

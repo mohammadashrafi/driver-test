@@ -1,13 +1,13 @@
 import type { ConfigFile } from '@rtk-query/codegen-openapi'
 
 const config: ConfigFile = {
-  schemaFile: 'http://172.16.55.161/Customer.json',
+  schemaFile: 'http://172.31.255.15:9990/v3/api-docs',
   apiFile: 'libs/redux/services/emptyApi.ts',
   apiImport: 'emptySplitApi',
   outputFiles: {
-    'libs/redux/services/edit.ts': {
-      filterEndpoints: [/edit/i],
-      exportName: 'editApi',
+    'libs/redux/services/pickup.ts': {
+      filterEndpoints: (_, op) => op.path.includes('driver/pickup'),
+      exportName: 'pickupApi',
     },
   },
   tag: true,

@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux'
 import { store } from 'libs/redux/store'
+import themeConfig from 'utils/configs/theme.config'
 import ConfigProvider from 'antd/lib/config-provider'
 
-import themeConfig from 'utils/configs/theme.config'
 import type { AppPropsWithLayout } from 'utils/interfaces'
 import 'styles/globals.scss'
 

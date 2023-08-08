@@ -10,4 +10,5 @@ export interface SimpleLayoutProps {
   historyBack?: boolean
   hasAction?: boolean
   actionTitle?: string
+  contentBgColor?: string
 }
