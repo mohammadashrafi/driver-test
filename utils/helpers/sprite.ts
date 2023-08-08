@@ -19,7 +19,7 @@ const handleSprite = () => {
   myDiv.id = 'div_id'
   myDiv.setAttribute('hidden', 'true')
 
-  fetch('/svg/SVG.svg').then(async (res) => {
+  fetch('/sprite.svg').then(async (res) => {
     myDiv.innerHTML = await streamToText(res.body as ReadableStream<Uint8Array>)
     document.body.appendChild(myDiv)
   })

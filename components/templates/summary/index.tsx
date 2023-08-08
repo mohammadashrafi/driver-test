@@ -5,6 +5,7 @@ import Form from 'antd/lib/form'
 import Input from 'antd/lib/input'
 import Select from 'antd/lib/select'
 import Button from 'antd/lib/button'
+import Icon from 'components/atoms/icon'
 import SummaryCard from 'components/organisms/summary-card'
 
 import styles from './summary.module.scss'
@@ -19,7 +20,7 @@ export default function Summary() {
   const mockData: SummaryCardProps[] = [
     { title: 'توزیع', status: 'pending', progress: 20 },
     { title: 'جمع آوری', status: 'completed', progress: 100 },
-    { title: 'مبادله', status: 'pending', progress: 30 },
+    { title: 'مبادله', status: 'failed', progress: 30 },
   ]
 
   const onFinish = (values: FieldType) => {
@@ -72,6 +73,13 @@ export default function Summary() {
             rules={[{ required: true, message: 'Please input your password!' }]}
           >
             <Input.Password />
+          </Form.Item>
+          <Form.Item<FieldType>
+            label='رمز عبور'
+            name='password'
+            rules={[{ required: true, message: 'Please input your password!' }]}
+          >
+            <Input suffix={<Icon id='edit' />} />
           </Form.Item>
           <Form.Item>
             <Button type='primary' htmlType='submit' block>
