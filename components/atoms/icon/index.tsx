@@ -1,9 +1,4 @@
-interface IconProps {
-  id: string
-  width?: number
-  height?: number
-  className?: string
-}
+import type { IconProps } from './interface'
 
 export default function Icon({
   id,

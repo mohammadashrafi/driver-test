@@ -5,9 +5,9 @@ import Row from 'antd/lib/row'
 import SimpleLayout from 'layouts/simple'
 import { activeFooter } from 'libs/redux/slices/footer'
 import { useAppDispatch, useAppSelector } from 'libs/redux/store'
-import { BottomSheet } from 'react-spring-bottom-sheet'
-// To Do: move react-spring-bottom-sheet imports to another file and create custom component
-import 'react-spring-bottom-sheet/dist/style.css'
+// import { BottomSheet } from 'react-spring-bottom-sheet'
+// // To Do: move react-spring-bottom-sheet imports to another file and create custom component
+// import 'react-spring-bottom-sheet/dist/style.css'
 
 import type { ReactElement } from 'react'
 
@@ -136,13 +136,6 @@ export default function HomePage() {
           Test
         </Button>
       </Col>
-      <BottomSheet
-        open={selected}
-        onDismiss={onClick}
-        snapPoints={({ minHeight }) => 11 * minHeight}
-      >
-        <span>some text to see</span>
-      </BottomSheet>
     </Row>
   )
 }

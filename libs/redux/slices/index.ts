@@ -3,6 +3,7 @@ import { combineReducers } from '@reduxjs/toolkit'
 import { emptySplitApi } from '../services/emptyApi'
 
 import authSlice from './auth'
+import cardSlice from './card'
 import footerSlice from './footer'
 // import { persistReducer } from 'redux-persist';
 // import { CookieStorage } from 'redux-persist-cookie-storage';
@@ -23,6 +24,7 @@ import footerSlice from './footer'
 export const reducers = combineReducers({
   auth: authSlice,
   footer: footerSlice,
+  card: cardSlice,
   // [authApi.reducerPath]: authApi.reducer,
   [emptySplitApi.reducerPath]: emptySplitApi.reducer,
 })

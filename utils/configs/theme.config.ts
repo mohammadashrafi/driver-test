@@ -11,6 +11,16 @@ const themeConfig: ThemeConfig = {
       controlHeight: 32,
       controlHeightLG: 40,
     },
+    Checkbox: {
+      colorBorder: '#898A8F',
+      controlInteractiveSize: 24,
+      lineWidth: 2,
+    },
+    Drawer: {
+      colorBgElevated: '#242e36',
+      colorText: '#CCCCCC',
+      colorSplit: '#fff',
+    },
     Form: {
       controlHeight: 36,
     },
@@ -21,7 +31,7 @@ const themeConfig: ThemeConfig = {
     },
     Radio: {
       radioSize: 18,
-      dotSize: 10,
+      dotSize: 14,
     },
     Select: {
       controlHeight: 36,
@@ -30,6 +40,12 @@ const themeConfig: ThemeConfig = {
     },
     Progress: {
       colorInfo: 'rgba(0, 0, 0, 0.88)',
+    },
+    Segmented: {
+      fontSize: 12,
+      colorBgLayout: '#f2f2f2',
+      boxShadowTertiary: '0px 2px 4px 0px rgba(0, 0, 0, 0.12)',
+      colorTextLabel: '#272729',
     },
   },
 }

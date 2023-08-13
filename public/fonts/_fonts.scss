@@ -1,0 +1,29 @@
+@font-face {
+  font-family: IRANSans;
+  src: url('/fonts/IRANSansWeb(FaNum).woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url('/fonts/IRANSansWeb(FaNum)_Light.woff2');
+  font-display: fallback;
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url('/fonts/IRANSansWeb(FaNum)_Medium.woff2');
+  font-display: fallback;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url('/fonts/IRANSansWeb(FaNum)_Bold.woff2');
+  font-display: fallback;
+  font-weight: bold;
+  font-variation-settings: 'wght' 700;
+}

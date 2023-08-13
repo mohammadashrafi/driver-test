@@ -1,3 +1,5 @@
+@use './vars' as *;
+
 .ant-progress-small {
   .ant-progress-inner {
     width: 4rem !important;
@@ -17,4 +19,22 @@
   &::after {
     display: none;
   }
+}
+
+.ant-card {
+  &-body {
+    padding: 1rem !important;
+  }
+}
+
+.ant-segmented {
+  direction: ltr;
+}
+
+span.ant-checkbox:not(.ant-checkbox-indeterminate)
+  > span.ant-checkbox-inner::after {
+  top: 42% !important;
+  inset-inline-start: 23% !important;
+  width: 6.571429px !important;
+  height: 12.714286px !important;
 }

@@ -15,9 +15,14 @@
     max-height: calc(100vh - 3.5rem);
     overflow-y: auto;
 
-    &--hasFooter {
+    &--hasActionFooter {
       min-height: calc(100vh - 7rem);
       max-height: calc(100vh - 7rem);
+    }
+
+    &--hasNavFooter {
+      min-height: calc(100vh - 9rem);
+      max-height: calc(100vh - 9rem);
     }
   }
 

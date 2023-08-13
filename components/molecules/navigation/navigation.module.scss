@@ -1,0 +1,46 @@
+.nav {
+  background-color: map-get($colors, neutral-white);
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline: 0;
+  border-radius: 1rem 1rem 0 0;
+  max-height: 5.5rem;
+  min-height: 5.5rem;
+  padding: 0.25rem 0.5rem 1.5rem 0.5rem;
+  box-shadow: 0px -2px 16px 0px rgba(0, 0, 0, 0.08);
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+
+    &--icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        stroke: map-get($colors, neutral-black-50);
+      }
+    }
+
+    &--title {
+      color: map-get($colors, neutral-black-60);
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+
+    &--active {
+      .nav__item {
+        &--icon svg {
+          stroke: map-get($colors, primary);
+        }
+
+        &--title {
+          color: map-get($colors, primary-shade);
+        }
+      }
+    }
+  }
+}

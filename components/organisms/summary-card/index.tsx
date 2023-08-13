@@ -1,10 +1,10 @@
 import Row from 'antd/lib/row'
 import Col from 'antd/lib/col'
+import Card from 'antd/lib/card'
 import Progress from 'antd/lib/progress'
 
 import styles from './summary-card.module.scss'
 import type { SummaryCardProps } from './interface'
-import { Card as AntCard } from 'antd'
 
 export default function SummaryCard({
   title,
@@ -27,8 +27,8 @@ export default function SummaryCard({
   }
 
   return (
-    <AntCard>
-      <Row className={styles['card']}>
+    <Card className={styles['card']}>
+      <Row>
         <Col className={styles['card__info']} flex='auto'>
           <Col className={styles['card__info--title']} span={24}>
             {title}
@@ -48,6 +48,6 @@ export default function SummaryCard({
           />
         </Col>
       </Row>
-    </AntCard>
+    </Card>
   )
 }

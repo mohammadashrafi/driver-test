@@ -1,5 +1,6 @@
 import Row from 'antd/lib/row'
 import Button from 'antd/lib/button'
+import Navigation from 'components/molecules/navigation'
 
 import styles from './simple.module.scss'
 
@@ -17,5 +18,5 @@ export const renderFooter = (
       </Row>
     )
   }
-  return
+  return <Navigation />
 }
