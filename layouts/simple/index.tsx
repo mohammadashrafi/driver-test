@@ -1,10 +1,7 @@
-import { useRouter } from 'next/router'
 import { useAppSelector } from 'libs/redux/store'
-import { renderFooter } from './helper'
-import Row from 'antd/lib/row'
-import Col from 'antd/lib/col'
 import cn from 'classnames'
 
+import { SimpleFooter, SimpleHeader } from './helper'
 import type { CSSProperties } from 'react'
 import type { SimpleLayoutProps } from 'layouts/interface'
 import styles from './simple.module.scss'
@@ -12,12 +9,12 @@ import styles from './simple.module.scss'
 export default function SimpleLayout({
   children,
   title,
-  historyBack = true,
   hasAction = false,
+  hasSearch = false,
+  historyBack = false,
   actionTitle = '',
   contentBgColor = undefined,
 }: SimpleLayoutProps) {
-  const { back } = useRouter()
   const { selected } = useAppSelector((state) => state.footer)
 
   const hasActionFooter = hasAction && selected
@@ -30,14 +27,13 @@ export default function SimpleLayout({
 
   return (
     <div className={styles['simple']}>
-      <Row className={styles['simple__header']} gutter={8} align='middle'>
-        {historyBack && (
-          <Col>
-            <button onClick={back}>back</button>
-          </Col>
-        )}
-        <Col className={styles['simple__header--title']}>{title}</Col>
-      </Row>
+      <div className={styles['simple__header--wrapper']}>
+        <SimpleHeader
+          historyBack={historyBack}
+          hasSearch={hasSearch}
+          title={title}
+        />
+      </div>
       <div
         className={cn(
           styles['simple__content'],
@@ -48,7 +44,11 @@ export default function SimpleLayout({
       >
         {children}
       </div>
-      {renderFooter(hasAction, actionTitle, selected)}
+      <SimpleFooter
+        hasAction={hasAction}
+        actionTitle={actionTitle}
+        selected={selected}
+      />
     </div>
   )
 }

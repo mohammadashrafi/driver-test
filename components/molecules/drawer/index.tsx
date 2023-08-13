@@ -12,9 +12,7 @@ export default function CustomDrawer({ open, setOpen }: CustomDrawerProps) {
       onClose={onClose}
       open={open}
       width={360}
-      closeIcon={
-        <Icon className='stroke-primary' id='delete' width={24} height={24} />
-      }
+      closeIcon={<Icon className='stroke-primary' id='delete' />}
     >
       <p>Some contents...</p>
       <p>Some contents...</p>

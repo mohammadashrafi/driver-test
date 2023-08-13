@@ -80,7 +80,7 @@ export default function Summary() {
               <Col span={24}>
                 <CustomCard
                   title={23}
-                  extra={<Icon id='delete-circle' width={24} height={24} />}
+                  extra={<Icon id='delete-circle' />}
                   content={mockContent}
                   description='لطفا به سرایدار تحویل داده شود'
                   onSelect={() => dispatch(selectCard(String(item)))}

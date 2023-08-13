@@ -1,11 +1,67 @@
+@keyframes slideIntoView {
+  from {
+    inset-inline-end: -100vw;
+  }
+  to {
+    inset-inline-end: 0;
+  }
+}
+
+@keyframes slideBackIntoView {
+  from {
+    inset-inline-end: 100vw;
+  }
+  to {
+    inset-inline-end: 0;
+  }
+}
+
 .simple {
   &__header {
+    position: relative;
+    animation: 0.3s ease-in-out slideBackIntoView;
     height: 3.5rem;
-    padding: 0.5rem;
-    border-block-end: 1px solid map-get($colors, neutral-black);
+    padding: 0.5rem 1rem;
+
+    &--wrapper {
+      border-block-end: 1px solid map-get($colors, neutral-black);
+    }
 
     &--title {
       font-weight: 700;
+    }
+
+    &--back {
+      button {
+        all: unset;
+        display: flex;
+        padding: 0.25rem;
+      }
+    }
+
+    &--search {
+      all: unset;
+      display: flex;
+      margin-inline-start: auto;
+      padding: 0.25rem;
+    }
+
+    &--searchBar {
+      height: 100%;
+    }
+
+    &--cancel {
+      button {
+        all: unset;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: map-get($colors, primary);
+      }
+    }
+
+    &--searching {
+      animation: 0.3s ease-in-out slideIntoView;
     }
   }
 
