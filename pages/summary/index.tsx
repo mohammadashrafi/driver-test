@@ -14,6 +14,8 @@ SummaryPage.getLayout = function getLayout(page: ReactElement) {
       title='خلاصه وضعیت درخواست ها'
       actionTitle='تایید'
       hasAction
+      hasSearch
+      historyBack
     >
       {page}
     </SimpleLayout>
