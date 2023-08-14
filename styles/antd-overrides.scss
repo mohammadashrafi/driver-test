@@ -1,0 +1,40 @@
+@use './vars' as *;
+
+.ant-progress-small {
+  .ant-progress-inner {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+
+  .ant-progress-text {
+    font-size: 0.875rem;
+  }
+}
+
+.ant-form-item .ant-form-item-label > label {
+  height: auto;
+  margin: 0 0.75rem;
+  direction: ltr;
+
+  &::after {
+    display: none;
+  }
+}
+
+.ant-card {
+  &-body {
+    padding: 1rem !important;
+  }
+}
+
+.ant-segmented {
+  direction: ltr;
+}
+
+span.ant-checkbox:not(.ant-checkbox-indeterminate)
+  > span.ant-checkbox-inner::after {
+  top: 42% !important;
+  inset-inline-start: 23% !important;
+  width: 6.571429px !important;
+  height: 12.714286px !important;
+}

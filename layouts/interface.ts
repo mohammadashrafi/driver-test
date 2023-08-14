@@ -9,5 +9,7 @@ export interface SimpleLayoutProps {
   title: string
   historyBack?: boolean
   hasAction?: boolean
+  hasSearch?: boolean
   actionTitle?: string
+  contentBgColor?: string
 }

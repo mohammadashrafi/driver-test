@@ -1,39 +1,99 @@
+@keyframes slideIntoView {
+  from {
+    inset-inline-end: -100vw;
+  }
+  to {
+    inset-inline-end: 0;
+  }
+}
+
+@keyframes slideBackIntoView {
+  from {
+    inset-inline-end: 100vw;
+  }
+  to {
+    inset-inline-end: 0;
+  }
+}
+
 .simple {
-    &__header {
-        height: 3.5rem;
+  &__header {
+    position: relative;
+    animation: 0.3s ease-in-out slideBackIntoView;
+    height: 3.5rem;
+    padding: 0.5rem 1rem;
+
+    &--wrapper {
+      border-block-end: 1px solid map-get($colors, neutral-black);
+    }
+
+    &--title {
+      font-weight: 700;
+    }
+
+    &--back {
+      button {
+        all: unset;
+        display: flex;
+        padding: 0.25rem;
+      }
+    }
+
+    &--search {
+      all: unset;
+      display: flex;
+      margin-inline-start: auto;
+      padding: 0.25rem;
+    }
+
+    &--searchBar {
+      height: 100%;
+    }
+
+    &--cancel {
+      button {
+        all: unset;
         padding: 0.5rem;
-        border-block-end: 1px solid map-get($colors, gray );
-
-        &--title {
-            font-weight: 700;
-        }
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: map-get($colors, primary);
+      }
     }
 
-    &__content {
-        padding: 1rem;
-        min-height: calc(100vh - 3.5rem);
-        max-height: calc(100vh - 3.5rem);
-        overflow-y: auto;
+    &--searching {
+      animation: 0.3s ease-in-out slideIntoView;
+    }
+  }
 
-        &--hasFooter {
-            min-height: calc(100vh - 7rem);
-            max-height: calc(100vh - 7rem);
-        }
+  &__content {
+    padding: 1rem;
+    min-height: calc(100vh - 3.5rem);
+    max-height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+
+    &--hasActionFooter {
+      min-height: calc(100vh - 7rem);
+      max-height: calc(100vh - 7rem);
     }
 
-    &__footer {
-        position: fixed;
-        inset-inline: 0;
-        inset-block-end: 0;
-        height: 3.5rem;
-        padding: 0.5rem;
-        background-color: white;
-        box-shadow: 0px -2px 16px 0px #00000014;
-
-
-        button {
-            background-color: aquamarine;
-            color: black;
-        }
+    &--hasNavFooter {
+      min-height: calc(100vh - 9rem);
+      max-height: calc(100vh - 9rem);
     }
+  }
+
+  &__footer {
+    position: fixed;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: 3.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0px -2px 16px 0px #00000014;
+
+    button {
+      background-color: aquamarine;
+      color: black;
+    }
+  }
 }

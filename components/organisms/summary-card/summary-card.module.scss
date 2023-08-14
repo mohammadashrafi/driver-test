@@ -1,0 +1,19 @@
+.card {
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      align-self: flex-start;
+    }
+
+    &--status {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: map-get($colors, neutral-black-50);
+      align-self: flex-end;
+    }
+  }
+}
