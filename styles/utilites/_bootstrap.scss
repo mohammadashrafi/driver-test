@@ -1,0 +1,70 @@
+@use '../vars' as *;
+
+// alignments
+@each $align in $alignments {
+  .justify-#{$align} {
+    justify-content: #{$align};
+  }
+
+  .items-#{$align} {
+    align-items: #{$align};
+  }
+
+  .justify-items-#{$align} {
+    justify-items: #{$align};
+  }
+
+  .content-#{$align} {
+    align-content: #{$align};
+  }
+  .align-self-#{$align} {
+    align-self: #{$align};
+  }
+}
+
+@each $textAlign in $textAlignments {
+  .text-#{$textAlign} {
+    text-align: #{$textAlign};
+  }
+}
+
+// flex
+@each $state in $flexStates {
+  .flex-#{$state} {
+    flex-wrap: #{$state} !important;
+  }
+}
+
+// display
+@each $display in $displayProps {
+  .d-#{$display} {
+    display: #{$display};
+  }
+}
+
+// sizing
+@each $size in $sizePercents {
+  $val: $size + 0%;
+  .w-#{$size} {
+    width: $val !important;
+  }
+
+  .mw-#{$size} {
+    max-width: $val !important;
+  }
+
+  .h-#{$size} {
+    height: $val !important;
+  }
+
+  .mh-#{$size} {
+    max-height: $val !important;
+  }
+}
+
+// position
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position !important;
+  }
+}

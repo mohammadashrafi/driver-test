@@ -1,5 +1,5 @@
 import Summary from 'components/templates/summary'
-import SimpleLayout from 'layouts/simple'
+import Layout from 'layouts'
 
 import type { ReactElement } from 'react'
 
@@ -9,15 +9,14 @@ export default function SummaryPage() {
 
 SummaryPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <SimpleLayout
+    <Layout
       contentBgColor='#f7f7f7'
       title='خلاصه وضعیت درخواست ها'
-      actionTitle='تایید'
-      hasAction
+      hasFooterAction
       hasSearch
       historyBack
     >
       {page}
-    </SimpleLayout>
+    </Layout>
   )
 }

@@ -2,7 +2,7 @@
 import Button from 'antd/lib/button'
 import Col from 'antd/lib/col'
 import Row from 'antd/lib/row'
-import SimpleLayout from 'layouts/simple'
+import Layout from 'layouts'
 import { activeFooter } from 'libs/redux/slices/footer'
 import { useAppDispatch, useAppSelector } from 'libs/redux/store'
 // import { BottomSheet } from 'react-spring-bottom-sheet'
@@ -142,8 +142,12 @@ export default function HomePage() {
 
 HomePage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <SimpleLayout title='خلاصه وضعیت درخواست ها' actionTitle='تایید' hasAction>
+    <Layout
+      title='خلاصه وضعیت درخواست ها'
+      actionFooterTitle='تایید'
+      hasFooterAction
+    >
       {page}
-    </SimpleLayout>
+    </Layout>
   )
 }
