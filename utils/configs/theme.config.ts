@@ -13,7 +13,7 @@ const themeConfig: ThemeConfig = {
     },
     Checkbox: {
       colorBorder: '#898A8F',
-      controlInteractiveSize: 24,
+      controlInteractiveSize: 20,
       lineWidth: 2,
     },
     Drawer: {
@@ -30,8 +30,13 @@ const themeConfig: ThemeConfig = {
       colorText: '#272729',
     },
     Radio: {
-      radioSize: 18,
-      dotSize: 14,
+      radioSize: 20,
+      dotSize: 13,
+      fontSize: 14,
+      lineWidth: 2,
+      colorText: '#272729',
+      colorBorder: '#898A8F',
+      wireframe: true,
     },
     Select: {
       controlHeight: 36,

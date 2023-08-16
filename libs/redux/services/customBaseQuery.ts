@@ -17,9 +17,6 @@ const baseQuery = fetchBaseQuery({
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.access_token
 
-    // setting default headers for reaquest
-    headers.set('Accept', 'Application/json')
-
     if (token) headers.set('Authorization', `Bearer ${token}`)
 
     return headers

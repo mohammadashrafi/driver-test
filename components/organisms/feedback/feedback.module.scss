@@ -1,0 +1,14 @@
+.feedback {
+  &--title {
+    color: map-get($colors, neutral-black-84);
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-block-end: 1.5rem;
+  }
+
+  &--option {
+    > span:last-of-type {
+      font-weight: 600;
+    }
+  }
+}

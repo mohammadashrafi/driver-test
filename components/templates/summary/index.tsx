@@ -15,6 +15,7 @@ import SummaryCard from 'components/organisms/summary-card'
 
 import styles from './summary.module.scss'
 import type { SummaryCardProps } from 'components/organisms/summary-card/interface'
+import Feedback from 'components/organisms/feedback'
 
 export default function Summary() {
   const dispatch = useAppDispatch()
@@ -91,6 +92,19 @@ export default function Summary() {
             ))
           )}
         </Row>
+      </Col>
+      <Col span={24}>
+        <Feedback
+          options={[
+            { label: 'فوت گیرنده', value: 1 },
+            { label: 'نقل مکان گیرنده', value: 2 },
+            { label: 'امتناع از دریافت مرسوله', value: 3 },
+            { label: 'نقص نشانی گیرنده', value: 4 },
+            { label: 'گیرنده شناخته نشد', value: 5 },
+          ]}
+          getValue={(value) => console.log(value)}
+          getOtherValue={(value) => console.log(value)}
+        />
       </Col>
     </Row>
   )

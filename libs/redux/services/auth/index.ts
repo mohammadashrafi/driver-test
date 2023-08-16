@@ -11,9 +11,6 @@ export const authApi = createApi({
         url: '/auth/login',
         method: 'POST',
         body,
-        headers: {
-          accept: 'aplication/json',
-        },
       }),
     }),
   }),
