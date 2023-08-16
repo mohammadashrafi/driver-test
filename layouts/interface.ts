@@ -1,15 +1,12 @@
 import type { ReactNode } from 'react'
 
-export interface MainLayoutProps {
-  children: ReactNode
-}
-
-export interface SimpleLayoutProps {
+export interface LayoutProps {
   children: ReactNode
   title: string
   historyBack?: boolean
-  hasAction?: boolean
+  hasFooterAction?: boolean
+  hasHeaderAction?: boolean
   hasSearch?: boolean
-  actionTitle?: string
+  actionFooterTitle?: string
   contentBgColor?: string
 }

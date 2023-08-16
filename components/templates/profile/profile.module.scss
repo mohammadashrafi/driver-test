@@ -1,0 +1,63 @@
+@mixin common-fontStyles($color: neutral-black-50, $weight: 300) {
+  text-align: center;
+  color: map-get($colors, $color);
+  font-size: 0.875rem;
+  font-weight: $weight;
+}
+
+.profile {
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--upload {
+      width: auto !important;
+      position: relative;
+    }
+
+    &--image {
+      border-radius: 50%;
+      //   object-fit: cover;
+    }
+  }
+
+  &__info {
+    background-color: map-get($colors, neutral-black-04);
+    margin-block-start: 2rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+
+    &--label {
+      @include common-fontStyles();
+    }
+
+    &--title {
+      @include common-fontStyles(neutral-black-84, 600);
+    }
+  }
+
+  &--edit-phone {
+    all: unset;
+    display: flex;
+  }
+
+  &--actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 0.25rem;
+
+    button {
+      color: map-get($colors, primary);
+      padding: 0.5rem;
+      line-height: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    [data-selector='logout'] {
+      color: map-get($colors, error);
+    }
+  }
+}

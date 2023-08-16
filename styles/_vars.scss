@@ -2,12 +2,48 @@ $colors: (
   primary: #ea6601,
   primary-shade: #d55d01,
   secondary-main: #242e36,
+  error: #cc4956,
   neutral-white: #fff,
   neutral-black: #ebebeb,
   neutral-black-84: #272729,
   neutral-black-60: #626266,
   neutral-black-50: #898a8f,
   neutral-black-40: #f2f2f2,
+  neutral-black-32: #adadad,
   neutral-black-20: #cccccc,
+  neutral-black-04: #f2f2f2,
   neutral-black-02: #f7f7f7,
 );
+
+$alignments: (
+  'center',
+  'space-between',
+  'space-around',
+  'space-evenly',
+  'flex-start',
+  'flex-end',
+  'stretch'
+);
+
+$displayProps: (
+  'block',
+  'inline-block',
+  'inline',
+  'flex',
+  'grid',
+  'inline-flex',
+  'inline-grid',
+  'table',
+  'inline-table',
+  'list-item',
+  'none',
+  'contents'
+);
+
+$textAlignments: ('left', 'right', 'center', 'revert');
+
+$sizePercents: (100, 80, 75, 50, 25, 33, 0);
+
+$flexStates: ('wrap', 'nowrap', 'wrap-reverse');
+
+$positions: (relative, absolute, fixed, sticky);

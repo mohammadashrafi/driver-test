@@ -21,6 +21,12 @@
   }
 }
 
+.ant-form-item-explain-error {
+  color: map-get($colors, error);
+  font-size: 0.75rem;
+  padding-inline: 0.75rem;
+}
+
 .ant-card {
   &-body {
     padding: 1rem !important;
@@ -37,4 +43,19 @@ span.ant-checkbox:not(.ant-checkbox-indeterminate)
   inset-inline-start: 23% !important;
   width: 6.571429px !important;
   height: 12.714286px !important;
+}
+
+.profile-upload {
+  > .ant-upload-select {
+    margin: 0 !important;
+    border-style: solid !important;
+  }
+}
+
+form > .ant-form-item {
+  margin-bottom: 1.25rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
